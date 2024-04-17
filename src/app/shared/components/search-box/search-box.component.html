@@ -1,6 +1,7 @@
 <input 
     type="text"
-    [placeholder]="placeholder"
     class="form-control"
-    (keyup.enter)="emitValue()"
+    [placeholder]="placeholder"
+    [value]="initialValue"
+    (keyup)="onKeyPress(searchBoxInput.value)"
     #searchBoxInput>

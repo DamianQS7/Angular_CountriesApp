@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country';
 import { count } from 'rxjs';
@@ -8,16 +8,27 @@ import { count } from 'rxjs';
   templateUrl: './by-capital-page.component.html',
   styles: ``
 })
-export class ByCapitalPageComponent {
-
+export class ByCapitalPageComponent implements OnInit {
   public countries: Country[] = [];
+  public isLoading: boolean = false;
+  public inputInitialValue: string = '';
+  private filterBy: string = 'capital';
 
   constructor(private countriesService: CountriesService) {}
 
+  ngOnInit(): void {
+    this.countries = this.countriesService.cacheStore.byCapital.countries;
+    this.inputInitialValue = this.countriesService.cacheStore.byCapital.term;
+  }
+
   public searchByCapital(capital: string): void {
-    
-    this.countriesService.searchByCapital(capital)
-        .subscribe(country => this.countries = country);
+    this.inputInitialValue = capital;
+    this.isLoading = true;
+    this.countriesService.getCountriesRequest(this.filterBy, capital)
+      .subscribe(countries => {
+        this.countries = countries;
+        this.isLoading = false;
+      }); 
 
   }
 }

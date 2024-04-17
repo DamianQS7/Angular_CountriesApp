@@ -1,0 +1,17 @@
+.spinner-container {
+    align-items: center;
+    background-color: black;
+    border-radius: 20px;
+    bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    gap: 5px;
+    padding: 5px 20px;
+    position: fixed;
+    right: 15px;
+}
+
+.spinner-container:hover {
+    transform: scale(1.1);
+}

@@ -9,4 +9,9 @@
 * Parent and Child Component communication through Input() and Output() decorators.
 * Routing;  RouterModule.forRoot() and RouterModule.forChild()
 * LazyLoad of Modules.
-* HTTP Requests handling through HttpClientModule and Observables 
+* HTTP Requests handling through HttpClientModule and Observables.
+* Data persistance using LocalStorage
+
+### Coming soon
+* Implement Google Maps
+* Better UI
