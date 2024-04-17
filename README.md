@@ -15,3 +15,5 @@
 ### Coming soon
 * Implement Google Maps
 * Better UI
+
+![app diagram](image.png)
