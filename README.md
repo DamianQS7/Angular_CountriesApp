@@ -1,6 +1,7 @@
 # CountriesApp
 
-### App built using Angular 17, following the Module-Based Architecture.
+App built using Angular 17, following the Module-Based Architecture.
+The original idea belongs to Fernando Herrera from DevTalles.
 
 #### This is a basic app that allows you to find information about countries, such as the flag, capital, population, etc. The information is provided by the public API restcountries.com
 
